@@ -1,0 +1,116 @@
+/* Estilos gerais */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #f8f0e3; /* Tom pastel claro para um toque suave */
+    color: #333; /* Cor de texto escura para contraste */
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4); /* Gradiente suave de rosa */
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 2rem;
+}
+
+#mensagens {
+    background: #fff0f5; /* Fundo rosa claro */
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#mensagens .carta {
+    text-align: center;
+    padding: 1rem;
+}
+
+#mensagens h2, #mapa h2, #galeria h2 {
+    font-size: 1.8rem;
+    color: #ff6f61; /* Tom de laranja suave */
+    text-align: center;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #ff6f61;
+    display: inline-block;
+}
+
+#mapa #map-container {
+    height: 500px;
+    margin: 2rem auto;
+    max-width: 90%;
+    border: 3px solid #ff6f61;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#galeria .fotos {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+#galeria .foto {
+    width: 200px; /* Largura fixa para manter o tamanho */
+    height: 200px; /* Altura fixa para manter o aspecto 1:1 */
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Cobre o espaço da imagem */
+    transition: transform 0.3s;
+}
+
+#galeria .foto:hover {
+    transform: scale(1.05); /* Leve aumento ao passar o mouse */
+}
+
+footer {
+    background: #fad0c4; /* Fundo rosa claro */
+    text-align: center;
+    padding: 1rem;
+    color: #333;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #mensagens, #mapa, #galeria {
+        padding: 1rem;
+    }
+
+    #galeria .foto {
+        width: 150px; /* Ajusta a largura para telas menores */
+        height: 150px; /* Mantém a altura 1:1 */
+    }
+}
