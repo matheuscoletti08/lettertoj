@@ -79,6 +79,25 @@ section {
     z-index: 10000; /* Também pode ser ajustado, se necessário */
 }
 
+/* porra para a mensagem e o iframe */
+.container-mensagem-iframe {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container-mensagem-iframe .carta {
+    flex: 1;
+    max-width: 50%;
+}
+
+.container-mensagem-iframe iframe {
+    flex: 1;
+    max-width: 50%;
+}
+
 #mensagens {
     background: #fff0f5; /* Fundo rosa claro */
     border-radius: 10px;
@@ -149,6 +168,7 @@ footer p {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    
     header h1 {
         font-size: 2rem;
     }
@@ -161,4 +181,15 @@ footer p {
         width: 150px; /* Ajusta a largura para telas menores */
         height: 150px; /* Mantém a altura 1:1 */
     }
+
+    .container-mensagem-iframe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-mensagem-iframe .carta, 
+    .container-mensagem-iframe iframe {
+        max-width: 100%;
+    }
 }
+
